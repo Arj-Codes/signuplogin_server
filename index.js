@@ -10,6 +10,6 @@ app.use(express.json());
 app.use(cors());
 app.use("/api/user", userRoute);
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Server Running at PORT ${PORT}`);
 });
